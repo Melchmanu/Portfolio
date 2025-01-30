@@ -1,249 +1,59 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>DataScience Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin } from "lucide-react";
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gray-100 p-6">
+      <header className="text-center mb-8">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">Manuel Melchiori</h1>
+        <p className="text-lg text-gray-600">
+          Data Analyst avec 13 ans d'expérience en programmation. Passionné par l'analyse des données et les solutions numériques innovantes.
+        </p>
+        <div className="mt-4 flex justify-center space-x-4">
+          <a href="https://github.com/Melchmanu" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline">
+              <Github className="mr-2" /> GitHub
+            </Button>
+          </a>
+          <a href="https://www.linkedin.com/in/manuel-melchiori/" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline">
+              <Linkedin className="mr-2" /> LinkedIn
+            </Button>
+          </a>
+        </div>
+      </header>
 
-				<!-- Intro -->
-				<div id="intro">
-					<h1>Hello I am Evan</h1>
-					<p><h3>a Data Scientist/Currently looking for a job in DataScience and Analytics</h3></p>
-					<ul class="actions">
-						<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-					</ul>
-				</div>
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Projets</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[1, 2, 3].map((project) => (
+            <Card key={project} className="bg-white shadow-md">
+              <img
+                src={`https://via.placeholder.com/300x200?text=Projet+${project}`}
+                alt={`Projet ${project}`}
+                className="w-full h-40 object-cover rounded-t-lg"
+              />
+              <CardContent>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Titre du Projet {project}</h3>
+                <p className="text-gray-600 mb-4">
+                  Description rapide du projet {project}. Ce texte peut être remplacé par une explication des outils, technologies ou objectifs.
+                </p>
+                <Button variant="outline" className="w-full">
+                  Voir plus
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">My Portfolio</a>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">About me</a></li>
-							<li class="active"><a href="projects.html">Projects</a></li>
-							<li><a href="generic.html">Development web with Flask</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://drive.google.com/file/d/1Jwtuq18M2DGFw2XZH7tq5IHN-XXhwoiI/view?usp=sharing" target="_blank" ><span class="label">Resume</span></a></li>
-							<li><a href="https://www.linkedin.com/in/evan-alonso-119616135/" class="icon brands fa-linkedin" target="_blank" ><span class="label">Linkedin</span></a></li>
-							<li><a href="https://github.com/AlonsoEvan" class="icon brands fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.malt.fr/profile/alonsoevan?newProfile=true&nisi" target="_blank" ><span class="label">Malt</span></a></li>
-							
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Posts -->
-						<section class="posts">
-							<article>
-								<header>
-									<h2><a>TensorFlow and TensorBoard</a></h2>
-								</header>
-								<a class="image fit"><img src="images/tensorboard.jpg" alt="" /></a>
-								<p>In this project, what we're going to be talking about is TensorBoard. It's a handy application that allows you to view aspects of your model, or models, in your browser.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/TensorFlow-and-TensorBoard" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-							
-							<article>
-								<header>
-									
-									<h2><a> Python scripts to predict stock prices </a></h2>
-								</header>
-								<a class="image fit"><img src="images/stockprices.jpg" alt="" /></a>
-								<p> Here's some scripts who aim to predict stock price. In those script you can specify any company you want (if she's in the dataset, they are 501 so you could try some if you want) and after that, just run the script and you'll obtain graph in output to see how well our models perform ! </p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/Data-Viz-ML-DL-with-stock-prices" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a>Recommander System</a></h2>
-								</header>
-								<a class="image fit"><img src="images/th.jpg" alt="" /></a>
-								<p>In this project, I built a movie recommender system to suggest movies for users. Users can get better experience if they can be recommended with good movies, and thus the website can maintain, and even expand its popularity.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/Movie-Recommender-System" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a>Webscraping</a></h2>
-								</header>
-								<a class="image fit"><img src="images/webscraping.png" alt="" /></a>
-								<p>In this repository, I built some scripts with BeautifulSoup and Scrapy to scrape data on website. It's a must have in term of skills when you're a Data Scientist. Because it allows to obtained data you cannot have otherwise.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/Webscraping-scripts" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									
-									<h2><a >COVID-19 Research articles with Clustering</a></h2>
-								</header>
-								<a class="image fit"><img src="images/corona.jpg" alt="" /></a>
-								<p>Given a large amount of literature and rapidly spreading COVID-19, it is difficult for a scientist to keep up with the research community promptly. Can we cluster similar research articles together to make it easier for health professionals to find relevant research articles? Clustering can be used to create a tool to identify similar articles, given a target article. It can also reduce the number of articles one has to go through as one can focus on a cluster of articles rather than all.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/COVID-19-Research-articles-Clustering" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a>Home Credit Risk Prediction</a></h2>
-								</header>
-								<a class="image fit"><img src="images/risk.jpg" alt="" /></a>
-								<p>Developed a prediction model that will be used to predict if an applicant is capable of repaying a loan.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/Home-Credit-Default-Risk" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a>Website to recognize handwritten digits</a></h2>
-								</header>
-								<a class="image fit"><img src="images/preview.gif" alt="" /></a>
-								<p>A web app that predicts numbers 0-9 using Deep Learning. You can write any digits you want and the model will try to predict them. I used Flask to create this app.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/Website-to-recognize-handwritten-digits" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a>Python script to predict cryptocurrency</a></h2>
-								</header>
-								<a class="image fit"><img src="images/predict_crypto.jpg" alt="" /></a>
-								<p>A script build to predict some cryptocurrency like bitcoin. You just need to download the .py and run in your command prompt. You can specify any currency you want between : "BTC-USD", "LTC-USD", "BCH-USD", "ETH-USD".</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/Predicting-cryptocurrency" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a>Keras Tuner</a></h2>
-								</header>
-								<a class="image fit"><img src="images/kerastuner.jpg" alt="" /></a>
-								<p>I recently came across the Keras Tuner package, which appears to serve the same goal than GridSearchCV/RandoGridSearchCV and so but for Neural Network. So in this project, I developed a script to tune Deep Learning models easily</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/keras-tuner" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a>NLP project with Deep Learning</a></h2>
-								</header>
-								<a class="image fit"><img src="images/DL.jpg" alt="" /></a>
-								<p>In this kernel, I will explore the data. Then, I will explain and demonstrate how various deep learning models can be used to identify toxic comments with tensorflow.keras. I will cover the following Deep Learning models : Simple RNN's LSTM's GRU's BI-Directional RNN's I will also talk about seq2seq, Attention models and BERT.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/-Deep-Learning-for-NLP-multilingual-toxic-comment-Classification" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a>Sentiment Analysis</a></h2>
-								</header>
-								<a class="image fit"><img src="images/sentiment1.jpg" alt="" /></a>
-								<p>The Rotten Tomatoes movie review dataset is a corpus of movie reviews used for sentiment analysis. This competition presents a chance to benchmark your sentiment-analysis ideas on the Rotten Tomatoes dataset. We are asked to label phrases on a scale of five values: negative, somewhat negative, neutral, somewhat positive, positive. Obstacles like sentence negation, sarcasm, terseness, language ambiguity, and many others make this task very challenging.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/Sentiment-Analysis-on-Movie-Reviews" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a>Pyspark project</a></h2>
-								</header>
-								<a class="image fit"><img src="images/pyspark.jpg" alt="" /></a>
-								<p>This notebook aim to do some practice with Pyspark. I will use some small data so using Pyspark here is actually kind of overkill. But this notebook is for training purposes only and is meant to give an ideo of how we can use Pyspark to build a machine learning model.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/Pyspark-project" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a>Churn prediction</a></h2>
-								</header>
-								<a class="image fit"><img src="images/churn.jpg" alt="" /></a>
-								<p>Developed a prediction model that predicts whether a user will churn after their subscription expires.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/WSDM---KKBox-s-Churn-Prediction-Challenge" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a>DataScientest project</a></h2>
-								</header>
-								<a class="image fit"><img src="images/data.jpg" alt="" /></a>
-								<p>Final project for DataScientest training program. Detection of toxic comments using classification methods. The aim was to build a fast and efficient model that can detect if a comment is nontoxic or toxic depending on its content. Our project is inspired by a Kaggle project, so we based ourselves on their criteria to separate toxic and nontoxic comments for our training phase. Detection of toxic comments: insulting, threatening, obscene. Modeling chosen: classification (such as feelings detection, moderation problem).</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/DataScientest-Project" target="_blank" class="button">View Code</a></li>
-							</article>
-							<article>
-								<header>
-									<h2><a>Recommendation Systems</a></h2>
-								</header>
-								<a class="image fit"><img src="images/system.jpg" alt="" /></a>
-								<p>Developed a Recommender model that seeks to predict the "rating" or "preference" a user would give to an movie or item.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/AlonsoEvan/Recommender-systems" target="_blank" class="button">View Code</a></li>
-								</ul>
-							</article>
-				</div>
-				
-				<footer id="footer">
-		
-				<section class="split contact">
-					<section class="alt">
-						<h3>Address</h3>
-						<p>2 avenue des mousquetaires<br />
-						Paris 94350 Val-de-Marne</p>
-					</section>
-					<section>
-						<h3>Phone</h3>
-						<p><a>06 56 70 18 33</a></p>
-					</section>
-					<section>
-						<h3>Email</h3>
-						<p><a>evan.alonso1@gmail.com<br />
-						
-						</a></p>
-					</section>
-					<section>
-						<h3>Social</h3>
-						<ul class="icons alt">
-							<li><a href="https://github.com/AlonsoEvan" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.linkedin.com/in/evan-alonso-119616135/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-						</ul>
-					</section>
-				</section>
-			</footer>
-			
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+      <footer className="text-center mt-12">
+        <h2 className="text-lg font-semibold text-gray-800">Contact</h2>
+        <p className="text-gray-600">Email : <a href="mailto:Melchmanu@gmail.com" className="text-blue-600">Melchmanu@gmail.com</a></p>
+        <p className="text-gray-600">Téléphone : <a href="tel:0662361767" className="text-blue-600">06.62.36.17.67</a></p>
+      </footer>
+    </div>
+  );
+}
