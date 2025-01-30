@@ -1,59 +1,156 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Github, Linkedin } from "lucide-react";
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Projects - Manuel Melchiori</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
 
-export default function Portfolio() {
-  return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <header className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Manuel Melchiori</h1>
-        <p className="text-lg text-gray-600">
-          Data Analyst avec 13 ans d'expérience en programmation. Passionné par l'analyse des données et les solutions numériques innovantes.
-        </p>
-        <div className="mt-4 flex justify-center space-x-4">
-          <a href="https://github.com/Melchmanu" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline">
-              <Github className="mr-2" /> GitHub
-            </Button>
-          </a>
-          <a href="https://www.linkedin.com/in/manuel-melchiori/" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline">
-              <Linkedin className="mr-2" /> LinkedIn
-            </Button>
-          </a>
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+        <!-- Intro -->
+        <div id="intro">
+            <h1>Projects</h1>
+            <p><h3>Explore my work in data analysis and programming</h3></p>
+            <ul class="actions">
+                <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">See Projects</a></li>
+            </ul>
         </div>
-      </header>
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Projets</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[1, 2, 3].map((project) => (
-            <Card key={project} className="bg-white shadow-md">
-              <img
-                src={`https://via.placeholder.com/300x200?text=Projet+${project}`}
-                alt={`Projet ${project}`}
-                className="w-full h-40 object-cover rounded-t-lg"
-              />
-              <CardContent>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Titre du Projet {project}</h3>
-                <p className="text-gray-600 mb-4">
-                  Description rapide du projet {project}. Ce texte peut être remplacé par une explication des outils, technologies ou objectifs.
-                </p>
-                <Button variant="outline" className="w-full">
-                  Voir plus
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Manuel Melchiori</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">About Me</a></li>
+                <li class="active"><a href="projects.html">Projects</a></li>
+                <li><a href="generic.html">Data Analysis Tools</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://drive.google.com/file/d/YOUR_RESUME_LINK" target="_blank"><span class="label">Resume</span></a></li>
+                <li><a href="https://www.linkedin.com/in/manuel-melchiori/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/melchmanu" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Projects Section -->
+            <section class="posts">
+
+                <article>
+                    <header>
+                        <h2><a href="#">Data Analysis with SQL</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/sql.jpg" alt="Data Analysis with SQL" /></a>
+                    <p>Analyzed sales data for an e-commerce platform using SQL, uncovering insights to optimize inventory and improve strategies.</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/melchmanu/ecommerce-sales-analysis" target="_blank" class="button">View Project</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <header>
+                        <h2><a href="#">Health Data Analysis with Python</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/health.jpg" alt="Health Data Analysis" /></a>
+                    <p>Performed statistical analyses on public health data using Python, providing visual insights for policy decision-making.</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/melchmanu/health-data-analysis" target="_blank" class="button">View Project</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <header>
+                        <h2><a href="#">Real Estate Data Management</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/realestate.jpg" alt="Real Estate Data Management" /></a>
+                    <p>Designed and managed a real estate database with SQL, enabling agents to make informed decisions on properties.</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/melchmanu/real-estate-database" target="_blank" class="button">View Project</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <header>
+                        <h2><a href="#">Dynamic Dashboard with Power BI</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/powerbi.jpg" alt="Power BI Dashboard" /></a>
+                    <p>Created an interactive dashboard to track project KPIs, enhancing decision-making for stakeholders.</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/melchmanu/powerbi-dashboard" target="_blank" class="button">View Project</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <header>
+                        <h2><a href="#">Equality Indicators Analysis</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/equality.jpg" alt="Equality Indicators Analysis" /></a>
+                    <p>Analyzed gender equality indicators while ensuring GDPR compliance, offering insights into workplace disparities.</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/melchmanu/equality-indicators-analysis" target="_blank" class="button">View Project</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <header>
+                        <h2><a href="#">Bookstore Sales Analysis</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/bookstore.jpg" alt="Bookstore Sales Analysis" /></a>
+                    <p>Analyzed bookstore sales using Python to identify trends and make recommendations for inventory management.</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/melchmanu/bookstore-sales-analysis" target="_blank" class="button">View Project</a></li>
+                    </ul>
+                </article>
+
+            </section>
+
         </div>
-      </section>
 
-      <footer className="text-center mt-12">
-        <h2 className="text-lg font-semibold text-gray-800">Contact</h2>
-        <p className="text-gray-600">Email : <a href="mailto:Melchmanu@gmail.com" className="text-blue-600">Melchmanu@gmail.com</a></p>
-        <p className="text-gray-600">Téléphone : <a href="tel:0662361767" className="text-blue-600">06.62.36.17.67</a></p>
-      </footer>
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Address</h3>
+                    <p>Sarre-Union, Grand Est, 67260, France</p>
+                </section>
+                <section>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+33662361767">06.62.36.17.67</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="mailto:Melchmanu@gmail.com">Melchmanu@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://github.com/melchmanu" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/manuel-melchiori/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
     </div>
-  );
-}
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
