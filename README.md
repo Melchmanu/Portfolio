@@ -1,3 +1,3 @@
 # My-portfolio 
 
-Check out my portfolio here : https://github.com/Melchmanu/Portfolio
+Check out my portfolio here : https://melchmanu.github.io/Portfolio/
