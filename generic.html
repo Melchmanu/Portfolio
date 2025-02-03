@@ -8,32 +8,31 @@
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <script>
             // Function to switch between French and English
-            function switchLanguage(lang) {
+            let currentLanguage = 'en';
+
+            function switchLanguage() {
                 var elements = document.querySelectorAll('[data-lang]');
-                elements.forEach(function(element) {
+                elements.forEach(function (element) {
                     var texts = element.dataset.lang.split(',');
-                    if (lang === 'fr') {
-                        element.textContent = texts[0];
-                    } else if (lang === 'en') {
-                        element.textContent = texts[1];
-                    }
+                    element.textContent = currentLanguage === 'en' ? texts[0] : texts[1];
                 });
+                currentLanguage = currentLanguage === 'en' ? 'fr' : 'en';
+                document.getElementById('language-button').textContent =
+                    currentLanguage === 'en' ? 'Language: English' : 'Langue: Français';
             }
         </script>
     </head>
     <body class="is-preload">
-        <!-- Language Switch Buttons -->
-        <div style="position: absolute; top: 10px; right: 10px;">
-            <button onclick="switchLanguage('fr')">Français</button>
-            <button onclick="switchLanguage('en')">English</button>
-        </div>
-
         <!-- Wrapper -->
         <div id="wrapper" class="fade-in">
             <!-- Intro -->
             <div id="intro">
-                <h1 data-lang="Hello, I am Manuel Melchiori,Hello, I am Manuel Melchiori">Hello, I am Manuel Melchiori</h1>
-                <p><h3 data-lang="A Data Analyst currently looking for a job in Data Analysis and Analytics,Un analyste de données à la recherche d'un emploi en analyse de données et en analyse">A Data Analyst currently looking for a job in Data Analysis and Analytics</h3></p>
+                <h1 data-lang="Hello, I am Manuel Melchiori,Bonjour, je suis Manuel Melchiori">Hello, I am Manuel Melchiori</h1>
+                <p>
+                    <h3 data-lang="A Data Analyst currently looking for a job in Data Analysis and Analytics,Un analyste de données à la recherche d'un emploi en analyse de données et en analytique">
+                        A Data Analyst currently looking for a job in Data Analysis and Analytics
+                    </h3>
+                </p>
                 <ul class="actions">
                     <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
                 </ul>
@@ -50,9 +49,21 @@
                     <li class="active"><a href="generic.html" data-lang="Data Analysis Tools,Outils d'analyse des données">Data Analysis Tools</a></li>
                 </ul>
                 <ul class="icons">
-                    <li><a href="https://drive.google.com/file/d/YOUR_RESUME_LINK" target="_blank"><span class="label" data-lang="Resume,Curriculum vitae">Resume</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/manuel-melchiori/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://github.com/melchmanu" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                    <li>
+                        <button id="language-button" onclick="switchLanguage()" class="button" style="cursor: pointer;">
+                            Language: English
+                        </button>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/manuel-melchiori/" class="icon brands fa-linkedin" target="_blank">
+                            <span class="label">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/melchmanu" class="icon brands fa-github" target="_blank">
+                            <span class="label">GitHub</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <!-- Main -->
@@ -64,12 +75,14 @@
                             <h2 data-lang="Data Analysis with SQL,Analyse des données avec SQL">Data Analysis with SQL</h2>
                         </header>
                         <a class="image fit"><img src="https://github.com/Melchmanu/Portfolio/blob/main/images/sentiment1.jpg" alt="SQL" /></a>
-                        <p data-lang="In this project, I used SQL to analyze e-commerce sales data. The results helped optimize inventory and improve sales strategies.,Dans ce projet, j'ai utilisé SQL pour analyser les données de ventes en ligne. Les résultats ont aidé à optimiser les stocks et à améliorer les stratégies de vente.">In this project, I used SQL to analyze e-commerce sales data. The results helped optimize inventory and improve sales strategies.</p>
+                        <p data-lang="In this project, I used SQL to analyze e-commerce sales data. The results helped optimize inventory and improve sales strategies.,Dans ce projet, j'ai utilisé SQL pour analyser les données de ventes en ligne. Les résultats ont aidé à optimiser les stocks et à améliorer les stratégies de vente.">
+                            In this project, I used SQL to analyze e-commerce sales data. The results helped optimize inventory and improve sales strategies.
+                        </p>
                         <ul class="actions special">
                             <li><a href="https://github.com/melchmanu/ecommerce-sales-analysis" target="_blank" class="button" data-lang="View Project,Voir le projet">View Project</a></li>
                         </ul>
                     </article>
-                    <!-- More articles similarly structured -->
+                    <!-- Other articles structured similarly -->
                 </section>
             </div>
             <!-- Footer -->
@@ -90,8 +103,16 @@
                     <section>
                         <h3 data-lang="Social,Réseaux sociaux">Social</h3>
                         <ul class="icons alt">
-                            <li><a href="https://github.com/melchmanu" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                            <li><a href="https://www.linkedin.com/in/manuel-melchiori/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                            <li>
+                                <a href="https://github.com/melchmanu" target="_blank" class="icon brands fa-github">
+                                    <span class="label">GitHub</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/manuel-melchiori/" target="_blank" class="icon brands fa-linkedin">
+                                    <span class="label">LinkedIn</span>
+                                </a>
+                            </li>
                         </ul>
                     </section>
                 </section>
