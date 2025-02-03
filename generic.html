@@ -7,56 +7,54 @@
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <script>
-            // Function to switch between French and English
-            let currentLanguage = 'en';
-
-            function switchLanguage() {
-                var elements = document.querySelectorAll('[data-lang]');
-                elements.forEach(function (element) {
-                    var texts = element.dataset.lang.split(',');
-                    element.textContent = currentLanguage === 'en' ? texts[0] : texts[1];
-                });
-                currentLanguage = currentLanguage === 'en' ? 'fr' : 'en';
-                document.getElementById('language-button').textContent =
-                    currentLanguage === 'en' ? 'Language: English' : 'Langue: Français';
+            // Simple script to toggle language
+            function switchLanguage(lang) {
+                document.querySelectorAll('.lang-fr').forEach(el => el.style.display = lang === 'fr' ? 'block' : 'none');
+                document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
             }
         </script>
     </head>
-    <body class="is-preload">
+    <body class="is-preload" onload="switchLanguage('en')">
 
         <!-- Wrapper -->
         <div id="wrapper" class="fade-in">
 
             <!-- Intro -->
             <div id="intro">
-                <h1 data-lang="Hello, I am Manuel Melchiori,Bonjour, je suis Manuel Melchiori">Hello, I am Manuel Melchiori</h1>
+                <h1 class="lang-en">Hello, I am Manuel Melchiori</h1>
+                <h1 class="lang-fr" style="display: none;">Bonjour, je suis Manuel Melchiori</h1>
                 <p>
-                    <h3 data-lang="A Data Analyst currently looking for a job in Data Analysis and Analytics,Un analyste de données à la recherche d'un emploi en analyse de données et en analytique">
+                    <h3 class="lang-en" style="display: block;">
                         A Data Analyst currently looking for a job in Data Analysis and Analytics
+                    </h3>
+                    <h3 class="lang-fr" style="display: none;">
+                        Un analyste de données à la recherche d'un emploi en analyse de données et en analytique
                     </h3>
                 </p>
                 <ul class="actions">
-                    <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly" data-lang="Continue,Continuer">Continue</a></li>
+                    <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly lang-en">Continue</a></li>
+                    <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly lang-fr" style="display: none;">Continuer</a></li>
                 </ul>
             </div>
 
             <!-- Header -->
             <header id="header">
-                <a href="index.html" class="logo" data-lang="My Portfolio,Mon Portfolio">My Portfolio</a>
+                <a href="index.html" class="logo lang-en">My Portfolio</a>
+                <a href="index.html" class="logo lang-fr" style="display: none;">Mon Portfolio</a>
             </header>
 
             <!-- Nav -->
             <nav id="nav">
                 <ul class="links">
-                    <li><a href="index.html" data-lang="About me,À propos de moi">About me</a></li>
-                    <li><a href="projects.html" data-lang="Projects,Projets">Projects</a></li>
-                    <li class="active"><a href="generic.html" data-lang="Data Analysis Tools,Outils d'analyse des données">Data Analysis Tools</a></li>
+                    <li><a href="index.html" class="lang-en">About me</a></li>
+                    <li><a href="index.html" class="lang-fr" style="display: none;">À propos de moi</a></li>
+                    <li class="active"><a href="generic.html" class="lang-en">Data Analysis Tools</a></li>
+                    <li class="active"><a href="generic.html" class="lang-fr" style="display: none;">Outils d'analyse des données</a></li>
                 </ul>
                 <ul class="icons">
                     <li>
-                        <button id="language-button" onclick="switchLanguage()" class="button" style="cursor: pointer;">
-                            Language: English
-                        </button>
+                        <button onclick="switchLanguage('en')" class="button lang-en">English</button>
+                        <button onclick="switchLanguage('fr')" class="button lang-fr" style="display: none;">Français</button>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/manuel-melchiori/" class="icon brands fa-linkedin" target="_blank">
@@ -73,44 +71,52 @@
 
             <!-- Main -->
             <div id="main">
-                <!-- Posts -->
-                <section class="posts">
-                    <article>
-                        <header>
-                            <h2 data-lang="Data Analysis with SQL,Analyse des données avec SQL">Data Analysis with SQL</h2>
-                        </header>
-                        <a class="image fit"><img src="https://github.com/Melchmanu/Portfolio/blob/main/images/sentiment1.jpg" alt="SQL" /></a>
-                        <p data-lang="In this project, I used SQL to analyze e-commerce sales data. The results helped optimize inventory and improve sales strategies.,Dans ce projet, j'ai utilisé SQL pour analyser les données de ventes en ligne. Les résultats ont aidé à optimiser les stocks et à améliorer les stratégies de vente.">
-                            In this project, I used SQL to analyze e-commerce sales data. The results helped optimize inventory and improve sales strategies.
-                        </p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/melchmanu/ecommerce-sales-analysis" target="_blank" class="button" data-lang="View Project,Voir le projet">View Project</a></li>
-                        </ul>
-                    </article>
-
-                    <!-- Other articles structured similarly -->
-                </section>
 
                 <!-- Data Analysis Tools Section -->
                 <section>
                     <header>
-                        <h2 data-lang="Data Analysis Tools,Outils d'analyse des données">Data Analysis Tools</h2>
+                        <h2 class="lang-en">Data Analysis Tools</h2>
+                        <h2 class="lang-fr" style="display: none;">Outils d'analyse des données</h2>
                     </header>
-                    <p data-lang="I am proficient in a wide range of data analysis tools that allow me to extract valuable insights from datasets. Here are some of the tools I work with.,Je maîtrise une large gamme d'outils d'analyse de données qui me permettent d'extraire des informations précieuses des ensembles de données. Voici quelques-uns des outils avec lesquels je travaille.">
+                    <p class="lang-en" style="display: block;">
                         I am proficient in a wide range of data analysis tools that allow me to extract valuable insights from datasets. Here are some of the tools I work with.
                     </p>
+                    <p class="lang-fr" style="display: none;">
+                        Je maîtrise une large gamme d'outils d'analyse de données qui me permettent d'extraire des informations précieuses des ensembles de données. Voici quelques-uns des outils avec lesquels je travaille.
+                    </p>
                     <ul>
-                        <li data-lang="Python,Python">Python</li>
-                        <li data-lang="SQL (MySQL, PostgreSQL, SQLite),SQL (MySQL, PostgreSQL, SQLite)">SQL (MySQL, PostgreSQL, SQLite)</li>
-                        <li data-lang="R Programming,R Programming">R Programming</li>
-                        <li data-lang="Excel and Google Sheets (Advanced formulas, pivot tables),Excel et Google Sheets (Formules avancées, tableaux croisés dynamiques)">Excel and Google Sheets (Advanced formulas, pivot tables)</li>
-                        <li data-lang="Tableau,Tableau">Tableau</li>
-                        <li data-lang="Power BI,Power BI">Power BI</li>
-                        <li data-lang="Data Cleaning (Pandas, Numpy),Nettoyage des données (Pandas, Numpy)">Data Cleaning (Pandas, Numpy)</li>
-                        <li data-lang="Machine Learning (scikit-learn, TensorFlow),Apprentissage automatique (scikit-learn, TensorFlow)">Machine Learning (scikit-learn, TensorFlow)</li>
-                        <li data-lang="Big Data Tools (Hadoop, Spark),Outils Big Data (Hadoop, Spark)">Big Data Tools (Hadoop, Spark)</li>
-                        <li data-lang="Data Visualization (Matplotlib, Seaborn),Visualisation de données (Matplotlib, Seaborn)">Data Visualization (Matplotlib, Seaborn)</li>
-                        <li data-lang="Statistical Analysis (SPSS, SAS),Analyse statistique (SPSS, SAS)">Statistical Analysis (SPSS, SAS)</li>
+                        <li class="lang-en">Python</li>
+                        <li class="lang-fr" style="display: none;">Python</li>
+
+                        <li class="lang-en">SQL (MySQL, PostgreSQL, SQLite)</li>
+                        <li class="lang-fr" style="display: none;">SQL (MySQL, PostgreSQL, SQLite)</li>
+
+                        <li class="lang-en">R Programming</li>
+                        <li class="lang-fr" style="display: none;">Programmation R</li>
+
+                        <li class="lang-en">Excel and Google Sheets (Advanced formulas, pivot tables)</li>
+                        <li class="lang-fr" style="display: none;">Excel et Google Sheets (Formules avancées, tableaux croisés dynamiques)</li>
+
+                        <li class="lang-en">Tableau</li>
+                        <li class="lang-fr" style="display: none;">Tableau</li>
+
+                        <li class="lang-en">Power BI</li>
+                        <li class="lang-fr" style="display: none;">Power BI</li>
+
+                        <li class="lang-en">Data Cleaning (Pandas, Numpy)</li>
+                        <li class="lang-fr" style="display: none;">Nettoyage des données (Pandas, Numpy)</li>
+
+                        <li class="lang-en">Machine Learning (scikit-learn, TensorFlow)</li>
+                        <li class="lang-fr" style="display: none;">Apprentissage automatique (scikit-learn, TensorFlow)</li>
+
+                        <li class="lang-en">Big Data Tools (Hadoop, Spark)</li>
+                        <li class="lang-fr" style="display: none;">Outils Big Data (Hadoop, Spark)</li>
+
+                        <li class="lang-en">Data Visualization (Matplotlib, Seaborn)</li>
+                        <li class="lang-fr" style="display: none;">Visualisation de données (Matplotlib, Seaborn)</li>
+
+                        <li class="lang-en">Statistical Analysis (SPSS, SAS)</li>
+                        <li class="lang-fr" style="display: none;">Analyse statistique (SPSS, SAS)</li>
                     </ul>
                 </section>
             </div>
@@ -119,19 +125,23 @@
             <footer id="footer">
                 <section class="split contact">
                     <section class="alt">
-                        <h3 data-lang="Address,Adresse">Address</h3>
+                        <h3 class="lang-en">Address</h3>
+                        <h3 class="lang-fr" style="display: none;">Adresse</h3>
                         <p>Sarre-Union, Grand Est, 67260, France</p>
                     </section>
                     <section>
-                        <h3 data-lang="Phone,Téléphone">Phone</h3>
+                        <h3 class="lang-en">Phone</h3>
+                        <h3 class="lang-fr" style="display: none;">Téléphone</h3>
                         <p><a href="tel:+33662361767">06.62.36.17.67</a></p>
                     </section>
                     <section>
-                        <h3 data-lang="Email,Courriel">Email</h3>
+                        <h3 class="lang-en">Email</h3>
+                        <h3 class="lang-fr" style="display: none;">Email</h3>
                         <p><a href="mailto:Melchmanu@gmail.com">Melchmanu@gmail.com</a></p>
                     </section>
                     <section>
-                        <h3 data-lang="Social,Réseaux sociaux">Social</h3>
+                        <h3 class="lang-en">Social</h3>
+                        <h3 class="lang-fr" style="display: none;">Réseaux sociaux</h3>
                         <ul class="icons alt">
                             <li>
                                 <a href="https://github.com/melchmanu" target="_blank" class="icon brands fa-github">
@@ -158,6 +168,5 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-
     </body>
 </html>
