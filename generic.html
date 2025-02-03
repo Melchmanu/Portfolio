@@ -1,127 +1,226 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Projects - Manuel Melchiori</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <script>
-            // Simple script to toggle language
-            function switchLanguage(lang) {
-                document.querySelectorAll('.lang-fr').forEach(el => el.style.display = lang === 'fr' ? 'block' : 'none');
-                document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
-            }
-        </script>
-    </head>
-    <body class="is-preload" onload="switchLanguage('en')">
+<head>
+    <title>Data Tools - Manuel Melchiori</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('.lang-fr').forEach(el => el.style.display = lang === 'fr' ? 'block' : 'none');
+            document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+        }
+    </script>
+</head>
+<body class="is-preload" onload="switchLanguage('en')">
 
-        <!-- Wrapper -->
-        <div id="wrapper" class="fade-in">
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
 
-            <!-- Intro -->
-            <div id="intro">
-                <h1 class="lang-en">Projects</h1>
-                <h1 class="lang-fr" style="display: none;">Projets</h1>
-                <p>
-                    <h3 class="lang-en" style="display: block;">Explore my work in data analysis and programming</h3>
-                    <h3 class="lang-fr" style="display: none;">Découvrez mon travail en analyse de données et programmation</h3>
-                </p>
-                <ul class="actions">
-                    <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly lang-en">See Projects</a></li>
-                    <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly lang-fr" style="display: none;">Voir les projets</a></li>
-                </ul>
-            </div>
-
-            <!-- Header -->
-            <header id="header">
-                <a href="index.html" class="logo lang-en">Manuel Melchiori</a>
-                <a href="index.html" class="logo lang-fr" style="display: none;">Manuel Melchiori</a>
-            </header>
-
-            <!-- Nav -->
-            <nav id="nav">
-                <ul class="links">
-                    <li><a href="index.html" class="lang-en">About Me</a></li>
-                    <li><a href="index.html" class="lang-fr" style="display: none;">À propos</a></li>
-                    <li class="active"><a href="projects.html" class="lang-en">Projects</a></li>
-                    <li class="active"><a href="projects.html" class="lang-fr" style="display: none;">Projets</a></li>
-                    <li><a href="generic.html" class="lang-en">Data Analysis Tools</a></li>
-                    <li><a href="generic.html" class="lang-fr" style="display: none;">Outils d'analyse de données</a></li>
-                </ul>
-                <ul class="icons">
-                    <li>
-                        <button onclick="switchLanguage('en')" class="button lang-en">English</button>
-                        <button onclick="switchLanguage('fr')" class="button lang-fr" style="display: none;">Français</button>
-                    </li>
-                    <li><a href="https://www.linkedin.com/in/manuel-melchiori/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://github.com/melchmanu" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-                </ul>
-            </nav>
-
-            <!-- Main -->
-            <div id="main">
-
-                <!-- Projects Section -->
-                <section class="posts">
-                    <!-- Fake Banknote Detection Project -->
-                    <article>
-                        <header>
-                            <h2 class="lang-en"><a href="#">Fake Banknote Detection with Python</a></h2>
-                            <h2 class="lang-fr" style="display: none;"><a href="#">Détection de Faux Billets avec Python</a></h2>
-                        </header>
-                        <a class="image fit"><img src="images/Fake%20Banknote%20Detection%20.jpg" alt="Fake Banknote Detection" /></a>
-                        <p class="lang-en">
-                            Developed an end-to-end solution for detecting counterfeit banknotes using machine learning models such as logistic regression, random forest, and gradient boosting. Included a Python-based app for real-time detection.
-                        </p>
-                        <p class="lang-fr" style="display: none;">
-                            Développement d'une solution complète pour détecter les faux billets en utilisant des modèles d'apprentissage automatique tels que la régression logistique, la forêt aléatoire et le gradient boosting. Inclut une application Python pour une détection en temps réel.
-                        </p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/Melchmanu/-Fake-Banknote-Detection-with-Python" target="_blank" class="button lang-en">View Project</a></li>
-                            <li><a href="https://github.com/Melchmanu/-Fake-Banknote-Detection-with-Python" target="_blank" class="button lang-fr" style="display: none;">Voir le projet</a></li>
-                        </ul>
-                    </article>
-                </section>
-            </div>
-
-            <!-- Footer -->
-            <footer id="footer">
-                <section class="split contact">
-                    <section class="alt">
-                        <h3 class="lang-en">Address</h3>
-                        <h3 class="lang-fr" style="display: none;">Adresse</h3>
-                        <p>Sarre-Union, Grand Est, 67260, France</p>
-                    </section>
-                    <section>
-                        <h3 class="lang-en">Phone</h3>
-                        <h3 class="lang-fr" style="display: none;">Téléphone</h3>
-                        <p><a href="tel:+33662361767">06.62.36.17.67</a></p>
-                    </section>
-                    <section>
-                        <h3 class="lang-en">Email</h3>
-                        <h3 class="lang-fr" style="display: none;">Email</h3>
-                        <p><a href="mailto:Melchmanu@gmail.com">Melchmanu@gmail.com</a></p>
-                    </section>
-                    <section>
-                        <h3 class="lang-en">Social</h3>
-                        <h3 class="lang-fr" style="display: none;">Réseaux sociaux</h3>
-                        <ul class="icons alt">
-                            <li><a href="https://github.com/melchmanu" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                            <li><a href="https://www.linkedin.com/in/manuel-melchiori/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                        </ul>
-                    </section>
-                </section>
-            </footer>
+        <!-- Intro -->
+        <div id="intro">
+            <h1 class="lang-en">Data Analysis Toolkit</h1>
+            <h1 class="lang-fr" style="display: none;">Boîte à outils analytique</h1>
+            <p>
+                <h3 class="lang-en">Mastering the tools of modern data analysis</h3>
+                <h3 class="lang-fr" style="display: none;">Maîtrise des outils d'analyse de données modernes</h3>
+            </p>
+            <ul class="actions">
+                <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly lang-en">Explore Tools</a></li>
+                <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly lang-fr" style="display: none;">Découvrir les outils</a></li>
+            </ul>
         </div>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo lang-en">Manuel Melchiori</a>
+            <a href="index.html" class="logo lang-fr" style="display: none;">Manuel Melchiori</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html" class="lang-en">About Me</a></li>
+                <li><a href="index.html" class="lang-fr" style="display: none;">À propos</a></li>
+                <li><a href="projects.html" class="lang-en">Projects</a></li>
+                <li><a href="projects.html" class="lang-fr" style="display: none;">Projets</a></li>
+                <li class="active"><a href="generic.html" class="lang-en">Data Analysis Tools</a></li>
+                <li class="active"><a href="generic.html" class="lang-fr" style="display: none;">Outils d'analyse</a></li>
+            </ul>
+            <ul class="icons">
+                <li>
+                    <button onclick="switchLanguage('en')" class="button small">EN</button>
+                    <button onclick="switchLanguage('fr')" class="button small">FR</button>
+                </li>
+                <li><a href="https://www.linkedin.com/in/manuel-melchiori/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/melchmanu" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Tools Section -->
+            <section class="posts">
+                <!-- Python -->
+                <article>
+                    <header>
+                        <h2 class="lang-en">Python Analytics</h2>
+                        <h2 class="lang-fr" style="display: none;">Analyse avec Python</h2>
+                    </header>
+                    <a class="image fit"><img src="images/Fake%20Banknote%20Detection%20.jpg" alt="Python Data Analysis" /></a>
+                    <p class="lang-en">
+                        Advanced data manipulation with Pandas/Numpy, statistical analysis with Scipy, 
+                        and machine learning implementations with Scikit-learn.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Manipulation de données avancée avec Pandas/Numpy, analyse statistique avec Scipy,
+                        et implémentations de machine learning avec Scikit-learn.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="#" class="button lang-en">See Examples</a></li>
+                        <li><a href="#" class="button lang-fr" style="display: none;">Voir exemples</a></li>
+                    </ul>
+                </article>
+
+                <!-- SQL -->
+                <article>
+                    <header>
+                        <h2 class="lang-en">SQL Databases</h2>
+                        <h2 class="lang-fr" style="display: none;">Bases de données SQL</h2>
+                    </header>
+                    <a class="image fit"><img src="images/Database%20with%20SQL.jpg" alt="SQL Database" /></a>
+                    <p class="lang-en">
+                        Complex query writing, database optimization, and ETL processes for efficient data management.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Écriture de requêtes complexes, optimisation de bases de données et processus ETL.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="#" class="button lang-en">View Projects</a></li>
+                        <li><a href="#" class="button lang-fr" style="display: none;">Voir projets</a></li>
+                    </ul>
+                </article>
+
+                <!-- Power BI -->
+                <article>
+                    <header>
+                        <h2 class="lang-en">Power BI Dashboards</h2>
+                        <h2 class="lang-fr" style="display: none;">Tableaux de bord Power BI</h2>
+                    </header>
+                    <a class="image fit"><img src="images/powerbi%20esn.jpg" alt="Power BI Dashboard" /></a>
+                    <p class="lang-en">
+                        Interactive data visualizations with DAX calculations, custom visuals, and automated reporting.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Visualisations interactives avec calculs DAX, visuels personnalisés et reporting automatisé.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="#" class="button lang-en">Explore Dashboards</a></li>
+                        <li><a href="#" class="button lang-fr" style="display: none;">Voir les dashboards</a></li>
+                    </ul>
+                </article>
+
+                <!-- Excel -->
+                <article>
+                    <header>
+                        <h2 class="lang-en">Advanced Excel</h2>
+                        <h2 class="lang-fr" style="display: none;">Excel Avancé</h2>
+                    </header>
+                    <a class="image fit"><img src="images/Bookstore%20Sales%20Analysis.jpg" alt="Excel Analysis" /></a>
+                    <p class="lang-en">
+                        Complex financial models, VBA automation, and dynamic dashboards with Power Query.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Modèles financiers complexes, automatisation VBA et tableaux de bord dynamiques.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="#" class="button lang-en">View Templates</a></li>
+                        <li><a href="#" class="button lang-fr" style="display: none;">Voir modèles</a></li>
+                    </ul>
+                </article>
+
+                <!-- Tableau -->
+                <article>
+                    <header>
+                        <h2 class="lang-en">Tableau Analytics</h2>
+                        <h2 class="lang-fr" style="display: none;">Analyse avec Tableau</h2>
+                    </header>
+                    <a class="image fit"><img src="images/tableau%20Drinking%20Water%20Accessibility%20Dashboard.jpg" alt="Tableau Dashboard" /></a>
+                    <p class="lang-en">
+                        Geospatial analysis, real-time data connections, and interactive storyboarding.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Analyse géospatiale, connexions de données temps réel et storyboards interactifs.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="#" class="button lang-en">See Visualizations</a></li>
+                        <li><a href="#" class="button lang-fr" style="display: none;">Voir visualisations</a></li>
+                    </ul>
+                </article>
+
+                <!-- KNIME -->
+                <article>
+                    <header>
+                        <h2 class="lang-en">Data Workflows (KNIME)</h2>
+                        <h2 class="lang-fr" style="display: none;">Flux de données (KNIME)</h2>
+                    </header>
+                    <a class="image fit"><img src="images/Gender%20Equality.jpg" alt="KNIME Workflow" /></a>
+                    <p class="lang-en">
+                        Automated data pipelines with machine learning integration and API connections.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Pipelines de données automatisés avec intégration machine learning et connexions API.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="#" class="button lang-en">View Workflows</a></li>
+                        <li><a href="#" class="button lang-fr" style="display: none;">Voir workflows</a></li>
+                    </ul>
+                </article>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section class="alt">
+                    <h3 class="lang-en">Address</h3>
+                    <h3 class="lang-fr" style="display: none;">Adresse</h3>
+                    <p>Sarre-Union, Grand Est, 67260, France</p>
+                </section>
+                <section>
+                    <h3 class="lang-en">Phone</h3>
+                    <h3 class="lang-fr" style="display: none;">Téléphone</h3>
+                    <p><a href="tel:+33662361767">06.62.36.17.67</a></p>
+                </section>
+                <section>
+                    <h3 class="lang-en">Email</h3>
+                    <h3 class="lang-fr" style="display: none;">Email</h3>
+                    <p><a href="mailto:Melchmanu@gmail.com">Melchmanu@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3 class="lang-en">Social</h3>
+                    <h3 class="lang-fr" style="display: none;">Réseaux sociaux</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://github.com/melchmanu" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/manuel-melchiori/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
 </html>
