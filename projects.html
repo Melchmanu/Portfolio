@@ -1,246 +1,247 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Projects - Manuel Melchiori</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <script>
-        // Optimized language switch function using classes
+        // Simple script to toggle language
         function switchLanguage(lang) {
-            document.body.classList.toggle('lang-en', lang === 'en');
-            document.body.classList.toggle('lang-fr', lang === 'fr');
+            document.querySelectorAll('.lang-fr').forEach(el => el.style.display = lang === 'fr' ? 'block' : 'none');
+            document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
         }
-
-        // Set default language
-        window.onload = () => switchLanguage('en');
     </script>
 </head>
+<body class="is-preload" onload="switchLanguage('en')">
 
-<body class="is-preload lang-en">
     <!-- Wrapper -->
     <div id="wrapper" class="fade-in">
 
         <!-- Intro -->
         <div id="intro">
             <h1 class="lang-en">Projects</h1>
-            <h1 class="lang-fr" style="display:none;">Projets</h1>
-
-            <h3 class="lang-en">Explore my work in data analysis and programming</h3>
-            <h3 class="lang-fr" style="display:none;">Découvrez mon travail en analyse de données et programmation</h3>
-
+            <h1 class="lang-fr" style="display: none;">Projets</h1>
+            <p>
+                <h3 class="lang-en" style="display: block;">Explore my work in data analysis and programming</h3>
+                <h3 class="lang-fr" style="display: none;">Découvrez mon travail en analyse de données et programmation</h3>
+            </p>
             <ul class="actions">
                 <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly lang-en">See Projects</a></li>
-                <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly lang-fr" style="display:none;">Voir les projets</a></li>
+                <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly lang-fr" style="display: none;">Voir les projets</a></li>
             </ul>
         </div>
 
         <!-- Header -->
         <header id="header">
-            <a href="index.html" class="logo">Manuel Melchiori</a>
+            <a href="index.html" class="logo lang-en">Manuel Melchiori</a>
+            <a href="index.html" class="logo lang-fr" style="display: none;">Manuel Melchiori</a>
         </header>
 
         <!-- Nav -->
         <nav id="nav">
             <ul class="links">
                 <li><a href="index.html" class="lang-en">About Me</a></li>
-                <li><a href="index.html" class="lang-fr" style="display:none;">À propos</a></li>
-                <li><a href="projects.html" class="lang-en">Projects</a></li>
-                <li><a href="projects.html" class="lang-fr" style="display:none;">Projets</a></li>
+                <li><a href="index.html" class="lang-fr" style="display: none;">À propos</a></li>
+                <li class="active"><a href="projects.html" class="lang-en">Projects</a></li>
+                <li class="active"><a href="projects.html" class="lang-fr" style="display: none;">Projets</a></li>
+                <li><a href="generic.html" class="lang-en">Data Analysis Tools</a></li>
+                <li><a href="generic.html" class="lang-fr" style="display: none;">Outils d'analyse de données</a></li>
             </ul>
             <ul class="icons">
                 <li>
                     <button onclick="switchLanguage('en')">English</button>
                     <button onclick="switchLanguage('fr')">Français</button>
                 </li>
-                <li><a href="https://www.linkedin.com/in/manuel-melchiori/" class="icon brands fa-linkedin" target="_blank"></a></li>
-                <li><a href="https://github.com/melchmanu" class="icon brands fa-github" target="_blank"></a></li>
+                <li><a href="https://www.linkedin.com/in/manuel-melchiori/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/melchmanu" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
             </ul>
         </nav>
 
         <!-- Main -->
         <div id="main">
+
+            <!-- Projects Section -->
             <section class="posts">
+                <!-- Fake Banknote Detection Project -->
+                <article>
+                    <header>
+                        <h2 class="lang-en"><a href="#">Fake Banknote Detection with Python</a></h2>
+                        <h2 class="lang-fr" style="display: none;"><a href="#">Détection de Faux Billets avec Python</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/Fake%20Banknote%20Detection%20.jpg" alt="Fake Banknote Detection" /></a>
+                    <p class="lang-en">
+                        Developed an end-to-end solution for detecting counterfeit banknotes using machine learning models such as logistic regression, random forest, and gradient boosting. Included a Python-based app for real-time detection.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Développement d'une solution complète pour détecter les faux billets en utilisant des modèles d'apprentissage automatique tels que la régression logistique, la forêt aléatoire et le gradient boosting. Inclut une application Python pour une détection en temps réel.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/Melchmanu/-Fake-Banknote-Detection-with-Python" target="_blank" class="button lang-en">View Project</a></li>
+                        <li><a href="https://github.com/Melchmanu/-Fake-Banknote-Detection-with-Python" target="_blank" class="button lang-fr" style="display: none;">Voir le projet</a></li>
+                    </ul>
+                </article>
+
+                <!-- Market Study for Chicken Export Opportunities Project -->
+                <article>
+                    <header>
+                        <h2 class="lang-en"><a href="#">Market Study for Chicken Export Opportunities</a></h2>
+                        <h2 class="lang-fr" style="display: none;"><a href="#">Étude de Marché pour les Opportunités d'Exportation de Poulet</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/Market%20Study%20for%20Export.jpg" alt="Market Study for Chicken Export Opportunities" /></a>
+                    <p class="lang-en">
+                        This project presents a comprehensive market study using Python, leveraging data from the FAO and the World Bank. The analysis includes dimensionality reduction through PCA and clustering techniques to identify market segments. The PESTEL framework is applied to understand the macro-environmental factors influencing the market.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Ce projet propose une étude de marché complète utilisant Python, en exploitant les données de la FAO et de la Banque mondiale. L'analyse inclut une réduction dimensionnelle via ACP et des techniques de clustering pour identifier les segments de marché. Le cadre PESTEL est appliqué pour comprendre les facteurs macro-environnementaux influençant le marché.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/Melchmanu/Market-Study-with-Python" target="_blank" class="button lang-en">View Project</a></li>
+                        <li><a href="https://github.com/Melchmanu/Market-Study-with-Python" target="_blank" class="button lang-fr" style="display: none;">Voir le projet</a></li>
+                    </ul>
+                </article>
+
+                <!-- Drinking Water Accessibility Dashboard Project -->
+                <article>
+                    <header>
+                        <h2 class="lang-en"><a href="#">Drinking Water Accessibility Dashboard</a></h2>
+                        <h2 class="lang-fr" style="display: none;"><a href="#">Tableau de Bord sur l'Accessibilité à l'Eau Potable</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/tableau%20Drinking%20Water%20Accessibility%20Dashboard.jpg" alt="Drinking Water Accessibility Dashboard" /></a>
+                    <p class="lang-en">
+                        Developed a Tableau dashboard for DWFA to identify countries with limited access to potable water and prioritize efforts to improve water accessibility. The dashboard includes context analysis, data preprocessing, and visualizations.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Création d'un tableau de bord Tableau pour DWFA afin d'identifier les pays ayant un accès limité à l'eau potable et de prioriser les efforts pour améliorer l'accessibilité. Le tableau de bord comprend une analyse contextuelle, un prétraitement des données et des visualisations.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/Melchmanu/Drinking-Water-Accessibility-Dashboard" target="_blank" class="button lang-en">View Project</a></li>
+                        <li><a href="https://github.com/Melchmanu/Drinking-Water-Accessibility-Dashboard" target="_blank" class="button lang-fr" style="display: none;">Voir le projet</a></li>
+                    </ul>
+                </article>
+
+                <!-- Bookstore Sales Analysis Project -->
+                <article>
+                    <header>
+                        <h2 class="lang-en"><a href="#">Bookstore Sales Analysis</a></h2>
+                        <h2 class="lang-fr" style="display: none;"><a href="#">Analyse des Ventes d'une Librairie</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/Bookstore%20Sales%20Analysis.jpg" alt="Bookstore Sales Analysis" /></a>
+                    <p class="lang-en">
+                        This project aims to analyze bookstore sales using Python. The analysis includes various visualizations and statistical tests to understand revenue trends, customer profiles, top and flop products, and revenue distribution.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Ce projet vise à analyser les ventes d'une librairie en utilisant Python. L'analyse inclut diverses visualisations et tests statistiques pour comprendre les tendances de revenus, les profils des clients, les produits les plus vendus et les moins vendus, ainsi que la répartition des revenus.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/Melchmanu/Bookstore-Sales-Analysis-with-Python" target="_blank" class="button lang-en">View Project</a></li>
+                        <li><a href="https://github.com/Melchmanu/Bookstore-Sales-Analysis-with-Python" target="_blank" class="button lang-fr" style="display: none;">Voir le projet</a></li>
+                    </ul>
+                </article>
+
+                <!-- Gender Equality Indicators Analysis Project -->
+                <article>
+                    <header>
+                        <h2 class="lang-en"><a href="#">Gender Equality Indicators Analysis</a></h2>
+                        <h2 class="lang-fr" style="display: none;"><a href="#">Analyse des Indicateurs d'Égalité de Genre</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/Gender%20Equality.jpg" alt="Gender Equality Indicators Analysis" /></a>
+                    <p class="lang-en">
+                        Conducted a gender equality diagnostic using KNIME to create visual representations and generate a CSV file for future analysis with Tableau. Ensured compliance with GDPR by anonymizing data and presenting a detailed methodology and results in a comprehensive presentation.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Réalisation d'un diagnostic sur l'égalité des genres à l'aide de KNIME pour créer des représentations visuelles et générer un fichier CSV pour une analyse future avec Tableau. Conformité RGPD garantie grâce à l'anonymisation des données et présentation méthodologique complète.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/Melchmanu/Gender-Equality-Indicators-Analysis-in-Compliance-with-GDPR" target="_blank" class="button lang-en">View Project</a></li>
+                        <li><a href="https://github.com/Melchmanu/Gender-Equality-Indicators-Analysis-in-Compliance-with-GDPR" target="_blank" class="button lang-fr" style="display: none;">Voir le projet</a></li>
+                    </ul>
+                </article>
+
+                <!-- Dynamic Dashboard with Power BI Project -->
+                <article>
+                    <header>
+                        <h2 class="lang-en"><a href="#">Dynamic Dashboard with Power BI</a></h2>
+                        <h2 class="lang-fr" style="display: none;"><a href="#">Tableau de Bord Dynamique avec Power BI</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/powerbi%20esn.jpg" alt="Dynamic Dashboard with Power BI" /></a>
+                    <p class="lang-en">
+                        Developed a Power BI dashboard to track project progress using data from 2018-2022. Automated data cleaning with Power Query Editor, integrated the Product Strategy Canvas, and provided a guide for updating the dashboard.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Création d'un tableau de bord Power BI pour suivre la progression des projets à l'aide des données de 2018 à 2022. Nettoyage automatisé des données avec Power Query Editor, intégration du Product Strategy Canvas et guide fourni pour mettre à jour le tableau de bord.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/Melchmanu/Dynamic-Dashboard-with-Power-BI-to-Visualize-Project-Progress" target="_blank" class="button lang-en">View Project</a></li>
+                        <li><a href="https://github.com/Melchmanu/Dynamic-Dashboard-with-Power-BI-to-Visualize-Project-Progress" target="_blank" class="button lang-fr" style="display: none;">Voir le projet</a></li>
+                    </ul>
+                </article>
 
 
                 
-<!-- Projects Section -->
-<section class="projects">
 
-    <!-- Fake Banknote Detection Project -->
-    <article>
-        <header>
-            <h2 class="lang-en"><a href="#">Fake Banknote Detection with Python</a></h2>
-            <h2 class="lang-fr" style="display: none;"><a href="#">Détection de Faux Billets avec Python</a></h2>
-        </header>
-        <a class="image fit"><img src="images/Fake%20Banknote%20Detection%20.jpg" alt="Fake Banknote Detection" /></a>
-        <p class="lang-en">
-            Developed an end-to-end solution for detecting counterfeit banknotes using machine learning models such as logistic regression, random forest, and gradient boosting. Included a Python-based app for real-time detection.
-        </p>
-        <p class="lang-fr" style="display: none;">
-            Développement d'une solution complète pour détecter les faux billets en utilisant des modèles d'apprentissage automatique tels que la régression logistique, la forêt aléatoire et le gradient boosting. Inclut une application Python pour une détection en temps réel.
-        </p>
-        <ul class="actions special">
-            <li><a href="https://github.com/Melchmanu/-Fake-Banknote-Detection-with-Python" target="_blank" class="button">View Project</a></li>
-        </ul>
-    </article>
-
-    <!-- Market Study for Chicken Export Opportunities Project -->
-    <article>
-        <header>
-            <h2 class="lang-en"><a href="#">Market Study for Chicken Export Opportunities</a></h2>
-            <h2 class="lang-fr" style="display: none;"><a href="#">Étude de Marché pour les Opportunités d'Exportation de Poulet</a></h2>
-        </header>
-        <a class="image fit"><img src="images/Market%20Study%20for%20Export.jpg" alt="Market Study for Chicken Export Opportunities" /></a>
-        <p class="lang-en">
-            This project presents a comprehensive market study using Python, leveraging data from the FAO and the World Bank. The analysis includes dimensionality reduction through PCA and clustering techniques to identify market segments. The PESTEL framework is applied to understand the macro-environmental factors influencing the market.
-        </p>
-        <p class="lang-fr" style="display: none;">
-            Ce projet propose une étude de marché complète utilisant Python, en exploitant les données de la FAO et de la Banque mondiale. L'analyse inclut une réduction dimensionnelle via ACP et des techniques de clustering pour identifier les segments de marché. Le cadre PESTEL est appliqué pour comprendre les facteurs macro-environnementaux influençant le marché.
-        </p>
-        <ul class="actions special">
-            <li><a href="https://github.com/Melchmanu/Market-Study-with-Python" target="_blank" class="button">View Project</a></li>
-        </ul>
-    </article>
-
-    <!-- Drinking Water Accessibility Dashboard Project -->
-    <article>
-        <header>
-            <h2 class="lang-en"><a href="#">Drinking Water Accessibility Dashboard</a></h2>
-            <h2 class="lang-fr" style="display: none;"><a href="#">Tableau de Bord sur l'Accessibilité à l'Eau Potable</a></h2>
-        </header>
-        <a class="image fit"><img src="images/tableau%20Drinking%20Water%20Accessibility%20Dashboard.jpg" alt="Drinking Water Accessibility Dashboard" /></a>
-        <p class="lang-en">
-            Developed a Tableau dashboard for DWFA to identify countries with limited access to potable water and prioritize efforts to improve water accessibility. The dashboard includes context analysis, data preprocessing, and visualizations.
-        </p>
-        <p class="lang-fr" style="display: none;">
-            Création d'un tableau de bord Tableau pour DWFA afin d'identifier les pays ayant un accès limité à l'eau potable et de prioriser les efforts pour améliorer l'accessibilité. Le tableau de bord comprend une analyse contextuelle, un prétraitement des données et des visualisations.
-        </p>
-        <ul class="actions special">
-            <li><a href="https://github.com/Melchmanu/Drinking-Water-Accessibility-Dashboard" target="_blank" class="button">View Project</a></li>
-        </ul>
-    </article>
-
-    <!-- Bookstore Sales Analysis Project -->
-    <article>
-        <header>
-            <h2 class="lang-en"><a href="#">Bookstore Sales Analysis</a></h2>
-            <h2 class="lang-fr" style="display: none;"><a href="#">Analyse des Ventes d'une Librairie</a></h2>
-        </header>
-        <a class="image fit"><img src="images/Bookstore%20Sales%20Analysis.jpg" alt="Bookstore Sales Analysis" /></a>
-        <p class="lang-en">
-            This project aims to analyze bookstore sales using Python. The analysis includes various visualizations and statistical tests to understand revenue trends, customer profiles, top and flop products, and revenue distribution.
-        </p>
-        <p class="lang-fr" style="display: none;">
-            Ce projet vise à analyser les ventes d'une librairie en utilisant Python. L'analyse inclut diverses visualisations et tests statistiques pour comprendre les tendances de revenus, les profils des clients, les produits les plus vendus et les moins vendus, ainsi que la répartition des revenus.
-        </p>
-        <ul class="actions special">
-            <li><a href="https://github.com/Melchmanu/Bookstore-Sales-Analysis-with-Python" target="_blank" class="button">View Project</a></li>
-        </ul>
-    </article>
-
-    <!-- Gender Equality Indicators Analysis Project -->
-    <article>
-        <header>
-            <h2 class="lang-en"><a href="#">Gender Equality Indicators Analysis</a></h2>
-            <h2 class="lang-fr" style="display: none;"><a href="#">Analyse des Indicateurs d'Égalité de Genre</a></h2>
-        </header>
-        <a class="image fit"><img src="images/Gender%20Equality.jpg" alt="Gender Equality Indicators Analysis" /></a>
-        <p class="lang-en">
-            Conducted a gender equality diagnostic using KNIME to create visual representations and generate a CSV file for future analysis with Tableau. Ensured compliance with GDPR by anonymizing data and presenting a detailed methodology and results in a comprehensive presentation.
-        </p>
-        <p class="lang-fr" style="display: none;">
-            Réalisation d'un diagnostic sur l'égalité des genres à l'aide de KNIME pour créer des représentations visuelles et générer un fichier CSV pour une analyse future avec Tableau. Conformité RGPD garantie grâce à l'anonymisation des données et présentation méthodologique complète.
-        </p>
-        <ul class="actions special">
-            <li><a href="https://github.com/Melchmanu/Gender-Equality-Indicators-Analysis-in-Compliance-with-GDPR" target="_blank" class="button">View Project</a></li>
-        </ul>
-    </article>
-
-    <!-- Dynamic Dashboard with Power BI Project -->
-    <article>
-        <header>
-            <h2 class="lang-en"><a href="#">Dynamic Dashboard with Power BI</a></h2>
-            <h2 class="lang-fr" style="display: none;"><a href="#">Tableau de Bord Dynamique avec Power BI</a></h2>
-        </header>
-        <a class="image fit"><img src="images/powerbi%20esn.jpg" alt="Dynamic Dashboard with Power BI" /></a>
-        <p class="lang-en">
-            Developed a Power BI dashboard to track project progress using data from 2018-2022. Automated data cleaning with Power Query Editor, integrated the Product Strategy Canvas, and provided a guide for updating the dashboard.
-        </p>
-        <p class="lang-fr" style="display: none;">
-            Création d'un tableau de bord Power BI pour suivre la progression des projets à l'aide des données de 2018 à 2022. Nettoyage automatisé des données avec Power Query Editor, intégration du Product Strategy Canvas et guide fourni pour mettre à jour le tableau de bord.
-        </p>
-        <ul class="actions special">
-            <li><a href="https://github.com/Melchmanu/Dynamic-Dashboard-with-Power-BI-to-Visualize-Project-Progress" target="_blank" class="button">View Project</a></li>
-        </ul>
-    </article>
-
-    <!-- Data Management Optimization for Retail Project -->
-    <article>
-        <header>
-            <h2 class="lang-en"><a href="#">Data Management Optimization for Retail with Python</a></h2>
-            <h2 class="lang-fr" style="display: none;"><a href="#">Optimisation de la gestion des données pour le retail avec Python</a></h2>
-        </header>
-        <a class="image fit"><img src="images/Data%20Management.jpg" alt="Data Management Optimization for Retail" /></a>
-        <p class="lang-en">
-            Implemented advanced data management techniques for retail optimization using Python. The project focused on data cleaning, transformation, and creating insights to improve decision-making processes.
-        </p>
-        <p class="lang-fr" style="display: none;">
-            Mise en œuvre de techniques avancées de gestion des données pour optimiser le commerce de détail à l'aide de Python. Le projet s'est concentré sur le nettoyage, la transformation des données et la création d'informations pour améliorer les processus de prise de décision.
-        </p>
-        <ul class="actions special">
-            <li><a href="https://github.com/Melchmanu/Data-Management-Optimization-for-Retail-with-Python" target="_blank" class="button">View Project</a></li>
-        </ul>
-    </article>
-
-    <!-- Real Estate Database with SQL Project -->
-    <article>
-        <header>
-            <h2 class="lang-en"><a href="#">Real Estate Database with SQL</a></h2>
-            <h2 class="lang-fr" style="display: none;"><a href="#">Base de Données Immobilière avec SQL</a></h2>
-        </header>
-        <a class="image fit"><img src="images/Database%20with%20SQL.jpg" alt="Real Estate Database with SQL" /></a>
-        <p class="lang-en">
-            Designed and implemented a comprehensive real estate database using SQL. The project involved creating database schemas, writing complex queries, and analyzing real estate market trends to generate insightful reports.
-        </p>
-        <p class="lang-fr" style="display: none;">
-            Conception et mise en œuvre d'une base de données immobilière complète en utilisant SQL. Le projet inclut la création de schémas de base de données, l'écriture de requêtes complexes et l'analyse des tendances du marché immobilier pour générer des rapports pertinents.
-        </p>
-        <ul class="actions special">
-            <li><a href="https://github.com/Melchmanu/DATAImmo-Building-and-Analyzing-a-Real-Estate-Database-with-SQL" target="_blank" class="button">View Project</a></li>
-        </ul>
-    </article>
-
-    <!-- Global Food Supply Study Project -->
-    <article>
-        <header>
-            <h2 class="lang-en"><a href="#">Global Food Supply Study</a></h2>
-            <h2 class="lang-fr" style="display: none;"><a href="#">Étude sur l'Approvisionnement Alimentaire Mondial</a></h2>
-        </header>
-        <a class="image fit"><img src="images/Global%20Food%20Supply.jpg" alt="Global Food Supply Study" /></a>
-        <p class="lang-en">
-            Conducted a comprehensive study on global food supply from 2013 to 2017, using data from FAOSTAT. The project involved importing and analyzing data on population, food availability, food aid, and undernutrition.
-        </p>
-        <p class="lang-fr" style="display: none;">
-            Réalisation d'une étude approfondie sur l'approvisionnement alimentaire mondial de 2013 à 2017, en utilisant les données de FAOSTAT. Le projet inclut l'importation et l'analyse de données sur la population, la disponibilité alimentaire, l'aide alimentaire et la sous-nutrition.
-        </p>
-        <ul class="actions special">
-            <li><a href="https://github.com/Melchmanu/Public-Health-Study-with-Python/tree/main" target="_blank" class="button">View Project</a></li>
-        </ul>
-    </article>
-
-</section>
+                <!-- Data Management Optimization for Retail Project -->
+                <article>
+                    <header>
+                        <h2 class="lang-en"><a href="#">Data Management Optimization for Retail with Python</a></h2>
+                        <h2 class="lang-fr" style="display: none;"><a href="#">Optimisation de la gestion des données pour le retail avec Python</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/Data%20Management.jpg" alt="Data Management Optimization for Retail" /></a>
+                    <p class="lang-en">
+                        Implemented advanced data management techniques for retail optimization using Python. The project focused on data cleaning, transformation, and creating insights to improve decision-making processes.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Mise en œuvre de techniques avancées de gestion des données pour optimiser le commerce de détail à l'aide de Python. Le projet s'est concentré sur le nettoyage, la transformation des données et la création d'informations pour améliorer les processus de prise de décision.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/Melchmanu/Data-Management-Optimization-for-Retail-with-Python" target="_blank" class="button lang-en">View Project</a></li>
+                        <li><a href="https://github.com/Melchmanu/Data-Management-Optimization-for-Retail-with-Python" target="_blank" class="button lang-fr" style="display: none;">Voir le projet</a></li>
+                    </ul>
+                </article>
 
 
 
+                <!-- Real Estate Database with SQL Project -->
+                <article>
+                    <header>
+                        <h2 class="lang-en"><a href="#">Real Estate Database with SQL</a></h2>
+                        <h2 class="lang-fr" style="display: none;"><a href="#">Base de Données Immobilière avec SQL</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/Database%20with%20SQL.jpg" alt="Real Estate Database with SQL" /></a>
+                    <p class="lang-en">
+                        Designed and implemented a comprehensive real estate database using SQL. The project involved creating database schemas, writing complex queries, and analyzing real estate market trends to generate insightful reports.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Conception et mise en œuvre d'une base de données immobilière complète en utilisant SQL. Le projet inclut la création de schémas de base de données, l'écriture de requêtes complexes et l'analyse des tendances du marché immobilier pour générer des rapports pertinents.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/Melchmanu/DATAImmo-Building-and-Analyzing-a-Real-Estate-Database-with-SQL" target="_blank" class="button lang-en">View Project</a></li>
+                        <li><a href="https://github.com/Melchmanu/DATAImmo-Building-and-Analyzing-a-Real-Estate-Database-with-SQL" target="_blank" class="button lang-fr" style="display: none;">Voir le projet</a></li>
+                    </ul>
+                </article>
 
+                <!-- Global Food Supply Study Project -->
+                <article>
+                    <header>
+                        <h2 class="lang-en"><a href="#">Global Food Supply Study</a></h2>
+                        <h2 class="lang-fr" style="display: none;"><a href="#">Étude sur l'Approvisionnement Alimentaire Mondial</a></h2>
+                    </header>
+                    <a class="image fit"><img src="images/Global%20Food%20Supply.jpg" alt="Global Food Supply Study" /></a>
+                    <p class="lang-en">
+                        Conducted a comprehensive study on global food supply from 2013 to 2017, using data from FAOSTAT. The project involved importing and analyzing data on population, food availability, food aid, and undernutrition.
+                    </p>
+                    <p class="lang-fr" style="display: none;">
+                        Réalisation d'une étude approfondie sur l'approvisionnement alimentaire mondial de 2013 à 2017, en utilisant les données de FAOSTAT. Le projet inclut l'importation et l'analyse de données sur la population, la disponibilité alimentaire, l'aide alimentaire et la sous-nutrition.
+                    </p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/Melchmanu/Public-Health-Study-with-Python/tree/main" target="_blank" class="button lang-en">View Project</a></li>
+                        <li><a href="https://github.com/Melchmanu/Public-Health-Study-with-Python/tree/main" target="_blank" class="button lang-fr" style="display: none;">Voir le projet</a></li>
+                    </ul>
+                </article>
 
-        
-   </section>
+            </section>
+
         </div>
 
         <!-- Footer -->
@@ -248,22 +249,22 @@
             <section class="split contact">
                 <section class="alt">
                     <h3 class="lang-en">Address</h3>
-                    <h3 class="lang-fr" style="display:none;">Adresse</h3>
+                    <h3 class="lang-fr" style="display: none;">Adresse</h3>
                     <p>Sarre-Union, Grand Est, 67260, France</p>
                 </section>
                 <section>
                     <h3 class="lang-en">Phone</h3>
-                    <h3 class="lang-fr" style="display:none;">Téléphone</h3>
+                    <h3 class="lang-fr" style="display: none;">Téléphone</h3>
                     <p><a href="tel:+33662361767">06.62.36.17.67</a></p>
                 </section>
                 <section>
                     <h3 class="lang-en">Email</h3>
-                    <h3 class="lang-fr" style="display:none;">Email</h3>
+                    <h3 class="lang-fr" style="display: none;">Email</h3>
                     <p><a href="mailto:Melchmanu@gmail.com">Melchmanu@gmail.com</a></p>
                 </section>
                 <section>
                     <h3 class="lang-en">Social</h3>
-                    <h3 class="lang-fr" style="display:none;">Réseaux sociaux</h3>
+                    <h3 class="lang-fr" style="display: none;">Réseaux sociaux</h3>
                     <ul class="icons alt">
                         <li><a href="https://github.com/melchmanu" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
                         <li><a href="https://www.linkedin.com/in/manuel-melchiori/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -273,5 +274,24 @@
         </footer>
 
     </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Script to toggle language visibility
+        document.getElementById('language-toggle').addEventListener('click', function () {
+            const langEnElements = document.querySelectorAll('.lang-en');
+            const langFrElements = document.querySelectorAll('.lang-fr');
+            langEnElements.forEach(el => el.style.display = el.style.display === 'none' ? '' : 'none');
+            langFrElements.forEach(el => el.style.display = el.style.display === 'none' ? '' : 'none');
+        });
+    </script>
+
 </body>
 </html>
