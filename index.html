@@ -1,160 +1,159 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Portfolio - Manuel Melchiori</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <script>
-            // Function to switch between French and English
-            function switchLanguage(lang) {
-                document.querySelectorAll('.lang-fr').forEach(el => el.style.display = lang === 'fr' ? 'block' : 'none');
-                document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
-            }
-        </script>
-    </head>
-    <body class="is-preload" onload="switchLanguage('en')">
+<head>
+    <title>About - Manuel Melchiori</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('.lang-fr').forEach(el => el.style.display = lang === 'fr' ? 'block' : 'none');
+            document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+        }
+    </script>
+</head>
+<body class="is-preload" onload="switchLanguage('en')">
 
-        <!-- Wrapper -->
-        <div id="wrapper" class="fade-in">
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
 
-            <!-- Intro -->
-            <div id="intro">
-                <h1 class="lang-en">Manuel Melchiori</h1>
-                <h1 class="lang-fr" style="display: none;">Manuel Melchiori</h1>
-                <p>
-                    <h3 class="lang-en" style="display: block;">Data Analyst | Business Intelligence Specialist</h3>
-                    <h3 class="lang-fr" style="display: none;">Analyste de Données | Expert en Intelligence d'Affaires</h3>
-                </p>
-                <ul class="actions">
-                    <li>
-                        <a href="#header" class="button icon solid solo fa-arrow-down scrolly lang-en">Explore My Work</a>
-                        <a href="#header" class="button icon solid solo fa-arrow-down scrolly lang-fr" style="display: none;">Découvrir Mon Portfolio</a>
-                    </li>
-                </ul>
-            </div>
+        <!-- Intro -->
+        <div id="intro">
+            <h1 class="lang-en">Manuel Melchiori</h1>
+            <h1 class="lang-fr" style="display: none;">Manuel Melchiori</h1>
+            <p>
+                <h3 class="lang-en">Data Analyst | BI Specialist</h3>
+                <h3 class="lang-fr" style="display: none;">Analyste de Données | Expert en BI</h3>
+            </p>
+            <ul class="actions">
+                <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly lang-en">Discover My Profile</a></li>
+                <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly lang-fr" style="display: none;">Découvrir mon profil</a></li>
+            </ul>
+        </div>
 
-            <!-- Header -->
-            <header id="header">
-                <a href="index.html" class="logo lang-en">Professional Portfolio</a>
-                <a href="index.html" class="logo lang-fr" style="display: none;">Portfolio Professionnel</a>
-            </header>
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo lang-en">Professional Portfolio</a>
+            <a href="index.html" class="logo lang-fr" style="display: none;">Portfolio Professionnel</a>
+        </header>
 
-            <!-- Nav -->
-            <nav id="nav">
-                <ul class="links">
-                    <li class="active">
-                        <a href="index.html" class="lang-en">Professional Profile</a>
-                        <a href="index.html" class="lang-fr" style="display: none;">Profil Professionnel</a>
-                    </li>
-                    <li>
-                        <a href="projects.html" class="lang-en">Case Studies</a>
-                        <a href="projects.html" class="lang-fr" style="display: none;">Études de Cas</a>
-                    </li>
-                    <li>
-                        <a href="tools.html" class="lang-en">Analytical Toolkit</a>
-                        <a href="tools.html" class="lang-fr" style="display: none;">Boîte à Outils Analytique</a>
-                    </li>
-                </ul>
-                <ul class="icons">
-                    <li>
-                        <button onclick="switchLanguage('en')" class="button lang-en">EN</button>
-                        <button onclick="switchLanguage('fr')" class="button lang-fr" style="display: none;">FR</button>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/manuel-melchiori/" class="icon brands fa-linkedin" target="_blank">
-                            <span class="label">LinkedIn</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/melchmanu" class="icon brands fa-github" target="_blank">
-                            <span class="label">GitHub</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html" class="lang-en">About Me</a></li>
+                <li class="active"><a href="index.html" class="lang-fr" style="display: none;">À propos</a></li>
+                <li><a href="projects.html" class="lang-en">Projects</a></li>
+                <li><a href="projects.html" class="lang-fr" style="display: none;">Projets</a></li>
+                <li><a href="tools.html" class="lang-en">Tools</a></li>
+                <li><a href="tools.html" class="lang-fr" style="display: none;">Outils</a></li>
+            </ul>
+            <ul class="icons">
+                <li>
+                    <button onclick="switchLanguage('en')" class="button small">EN</button>
+                    <button onclick="switchLanguage('fr')" class="button small">FR</button>
+                </li>
+                <li><a href="https://www.linkedin.com/in/manuel-melchiori/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/melchmanu" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
 
-            <!-- Main -->
-            <div id="main">
-                <!-- About Section -->
-                <section>
-                    <h2 class="lang-en">Professional Overview</h2>
-                    <h2 class="lang-fr" style="display: none;">Aperçu Professionnel</h2>
-                    
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Featured Post -->
+            <article class="post featured">
+                <header class="major">
+                    <h2 class="lang-en">Data Solutions Architect</h2>
+                    <h2 class="lang-fr" style="display: none;">Architecte de Solutions Data</h2>
                     <p class="lang-en">
-                        <strong>Data-Driven Solutions Architect</strong><br>
-                        With 13+ years of technical experience spanning programming and data analytics, I specialize in transforming complex datasets into actionable business insights. Based in the Grand Est region of France, I combine technical expertise with strategic thinking to deliver measurable results.
+                        Combining 13+ years of technical expertise in data analytics and business intelligence<br>
+                        to transform raw data into strategic assets for informed decision-making.
                     </p>
                     <p class="lang-fr" style="display: none;">
-                        <strong>Architecte de Solutions Data-Driven</strong><br>
-                        Fort de 13 ans d'expérience technique en programmation et analyse de données, je spécialise dans la transformation de données complexes en insights actionnables. Basé en Grand Est, France, j'allie expertise technique et vision stratégique pour délivrer des résultats mesurables.
+                        13+ ans d'expertise technique en analyse de données et business intelligence<br>
+                        pour transformer les données brutes en actifs stratégiques pour la prise de décision.
                     </p>
-
-                    <h3 class="lang-en">Core Competencies</h3>
-                    <h3 class="lang-fr" style="display: none;">Compétences Clés</h3>
-                    <ul class="lang-en">
-                        <li>Advanced Data Visualization & Storytelling</li>
-                        <li>Predictive Modeling & Machine Learning</li>
-                        <li>Full-Cycle Analytics Implementation</li>
-                        <li>Cross-Functional Team Leadership</li>
-                    </ul>
-                    <ul class="lang-fr" style="display: none;">
-                        <li>Visualisation de Données Avancée</li>
-                        <li>Modélisation Prédictive & Machine Learning</li>
-                        <li>Mise en Œuvre de Solutions Analytiques Complètes</li>
-                        <li>Management d'Équipes Pluridisciplinaires</li>
-                    </ul>
-                </section>
-            </div>
-
-            <!-- Footer -->
-            <footer id="footer">
-                <section class="split contact">
-                    <section class="alt">
-                        <h3 class="lang-en">Strategic Location</h3>
-                        <h3 class="lang-fr" style="display: none;">Localisation Stratégique</h3>
-                        <p>Sarre-Union, Grand Est, France<br>EU Zone - Open to International Projects</p>
-                    </section>
-                    <section>
-                        <h3 class="lang-en">Professional Contact</h3>
-                        <h3 class="lang-fr" style="display: none;">Contact Professionnel</h3>
-                        <p><a href="tel:+33662361767">+33 6 62 36 17 67</a></p>
-                    </section>
-                    <section>
-                        <h3 class="lang-en">Digital Correspondence</h3>
-                        <h3 class="lang-fr" style="display: none;">Correspondance Électronique</h3>
-                        <p><a href="mailto:Melchmanu@gmail.com">Melchmanu@gmail.com</a></p>
-                    </section>
-                    <section>
-                        <h3 class="lang-en">Professional Network</h3>
-                        <h3 class="lang-fr" style="display: none;">Réseau Professionnel</h3>
-                        <ul class="icons alt">
-                            <li>
-                                <a href="https://github.com/melchmanu" target="_blank" class="icon brands fa-github">
-                                    <span class="label">GitHub</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/manuel-melchiori/" target="_blank" class="icon brands fa-linkedin">
-                                    <span class="label">LinkedIn</span>
-                                </a>
-                            </li>
+                </header>
+                <a class="image main"><img src="images/data_architect.jpg" alt="Data Architecture" /></a>
+                
+                <div class="row">
+                    <div class="col-6 col-12-small">
+                        <h3 class="lang-en">Core Expertise</h3>
+                        <h3 class="lang-fr" style="display: none;">Expertise Clé</h3>
+                        <ul class="lang-en">
+                            <li>Advanced Data Visualization</li>
+                            <li>Predictive Analytics</li>
+                            <li>Machine Learning Pipelines</li>
+                            <li>BI System Design</li>
                         </ul>
-                    </section>
-                </section>
-            </footer>
+                        <ul class="lang-fr" style="display: none;">
+                            <li>Visualisation de Données Avancée</li>
+                            <li>Analyse Prédictive</li>
+                            <li>Pipelines de Machine Learning</li>
+                            <li>Conception de Systèmes BI</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <h3 class="lang-en">Methodology</h3>
+                        <h3 class="lang-fr" style="display: none;">Méthodologie</h3>
+                        <ul class="lang-en">
+                            <li>Agile Data Development</li>
+                            <li>Cross-functional Collaboration</li>
+                            <li>Full-cycle Implementation</li>
+                            <li>Continuous Optimization</li>
+                        </ul>
+                        <ul class="lang-fr" style="display: none;">
+                            <li>Développement Data Agile</li>
+                            <li>Collaboration Pluridisciplinaire</li>
+                            <li>Implémentation End-to-End</li>
+                            <li>Optimisation Continue</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
 
         </div>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section class="alt">
+                    <h3 class="lang-en">Location</h3>
+                    <h3 class="lang-fr" style="display: none;">Localisation</h3>
+                    <p>Sarre-Union, Grand Est, France</p>
+                </section>
+                <section>
+                    <h3 class="lang-en">Phone</h3>
+                    <h3 class="lang-fr" style="display: none;">Téléphone</h3>
+                    <p><a href="tel:+33662361767">+33 6 62 36 17 67</a></p>
+                </section>
+                <section>
+                    <h3 class="lang-en">Email</h3>
+                    <h3 class="lang-fr" style="display: none;">Email</h3>
+                    <p><a href="mailto:Melchmanu@gmail.com">Melchmanu@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3 class="lang-en">Social</h3>
+                    <h3 class="lang-fr" style="display: none;">Réseaux</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://github.com/melchmanu" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/manuel-melchiori/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
 
-    </body>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
 </html>
