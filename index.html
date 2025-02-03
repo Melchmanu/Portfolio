@@ -8,63 +8,59 @@
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <script>
             // Function to switch between French and English
-            let currentLanguage = 'en';
-
-            function switchLanguage() {
-                var elements = document.querySelectorAll('[data-lang]');
-                elements.forEach(function (element) {
-                    var texts = element.dataset.lang.split(',');
-                    element.textContent = currentLanguage === 'en' ? texts[0] : texts[1];
-                });
-                currentLanguage = currentLanguage === 'en' ? 'fr' : 'en';
-                document.getElementById('language-button').textContent =
-                    currentLanguage === 'en' ? 'Language: English' : 'Langue: Français';
+            function switchLanguage(lang) {
+                document.querySelectorAll('.lang-fr').forEach(el => el.style.display = lang === 'fr' ? 'block' : 'none');
+                document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
             }
         </script>
     </head>
-    <body class="is-preload">
+    <body class="is-preload" onload="switchLanguage('en')">
 
         <!-- Wrapper -->
         <div id="wrapper" class="fade-in">
 
             <!-- Intro -->
             <div id="intro">
-                <h1 data-lang="Hi, I'm Manuel Melchiori,Bonjour, je suis Manuel Melchiori">Hi, I'm Manuel Melchiori</h1>
+                <h1 class="lang-en">Manuel Melchiori</h1>
+                <h1 class="lang-fr" style="display: none;">Manuel Melchiori</h1>
                 <p>
-                    <h3 data-lang="A Data Analyst passionate about uncovering insights and solving problems with data.,Un analyste de données passionné par la découverte d'informations et la résolution de problèmes grâce aux données.">
-                        A Data Analyst passionate about uncovering insights and solving problems with data.
-                    </h3>
+                    <h3 class="lang-en" style="display: block;">Data Analyst | Business Intelligence Specialist</h3>
+                    <h3 class="lang-fr" style="display: none;">Analyste de Données | Expert en Intelligence d'Affaires</h3>
                 </p>
                 <ul class="actions">
                     <li>
-                        <a href="#header" class="button icon solid solo fa-arrow-down scrolly" data-lang="Explore,Explorer">Explore</a>
+                        <a href="#header" class="button icon solid solo fa-arrow-down scrolly lang-en">Explore My Work</a>
+                        <a href="#header" class="button icon solid solo fa-arrow-down scrolly lang-fr" style="display: none;">Découvrir Mon Portfolio</a>
                     </li>
                 </ul>
             </div>
 
             <!-- Header -->
             <header id="header">
-                <a href="index.html" class="logo" data-lang="Manuel Melchiori,Manuel Melchiori">Manuel Melchiori</a>
+                <a href="index.html" class="logo lang-en">Professional Portfolio</a>
+                <a href="index.html" class="logo lang-fr" style="display: none;">Portfolio Professionnel</a>
             </header>
 
             <!-- Nav -->
             <nav id="nav">
                 <ul class="links">
                     <li class="active">
-                        <a href="index.html" data-lang="About Me,À propos de moi">About Me</a>
+                        <a href="index.html" class="lang-en">Professional Profile</a>
+                        <a href="index.html" class="lang-fr" style="display: none;">Profil Professionnel</a>
                     </li>
                     <li>
-                        <a href="projects.html" data-lang="Projects,Projets">Projects</a>
+                        <a href="projects.html" class="lang-en">Case Studies</a>
+                        <a href="projects.html" class="lang-fr" style="display: none;">Études de Cas</a>
                     </li>
                     <li>
-                        <a href="tools.html" data-lang="Data Analysis Tools,Outils d'analyse des données">Data Analysis Tools</a>
+                        <a href="tools.html" class="lang-en">Analytical Toolkit</a>
+                        <a href="tools.html" class="lang-fr" style="display: none;">Boîte à Outils Analytique</a>
                     </li>
                 </ul>
                 <ul class="icons">
                     <li>
-                        <button id="language-button" onclick="switchLanguage()" class="button" style="cursor: pointer;">
-                            Language: English
-                        </button>
+                        <button onclick="switchLanguage('en')" class="button lang-en">EN</button>
+                        <button onclick="switchLanguage('fr')" class="button lang-fr" style="display: none;">FR</button>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/manuel-melchiori/" class="icon brands fa-linkedin" target="_blank">
@@ -83,9 +79,32 @@
             <div id="main">
                 <!-- About Section -->
                 <section>
-                    <p data-lang="I'm Manuel Melchiori, based in Sarre-Union, Grand Est, France. I have over 13 years of experience as a programmer and have transitioned into data analysis, where I apply my technical expertise to uncover meaningful insights from data. My skills include data visualization, statistical analysis, and working with tools like Python, SQL, and Tableau. In my free time, I love crafting 3D models and delving into AI advancements.,Je suis Manuel Melchiori, basé à Sarre-Union, Grand Est, France. J'ai plus de 13 ans d'expérience en tant que programmeur et je me suis reconverti dans l'analyse de données, où j'applique mon expertise technique pour découvrir des informations utiles à partir de données. Mes compétences incluent la visualisation de données, l'analyse statistique et l'utilisation d'outils tels que Python, SQL et Tableau. Pendant mon temps libre, j'adore créer des modèles 3D et explorer les avancées en IA.">
-                        I'm Manuel Melchiori, based in Sarre-Union, Grand Est, France. I have over 13 years of experience as a programmer and have transitioned into data analysis, where I apply my technical expertise to uncover meaningful insights from data. My skills include data visualization, statistical analysis, and working with tools like Python, SQL, and Tableau. In my free time, I love crafting 3D models and delving into AI advancements.
+                    <h2 class="lang-en">Professional Overview</h2>
+                    <h2 class="lang-fr" style="display: none;">Aperçu Professionnel</h2>
+                    
+                    <p class="lang-en">
+                        <strong>Data-Driven Solutions Architect</strong><br>
+                        With 13+ years of technical experience spanning programming and data analytics, I specialize in transforming complex datasets into actionable business insights. Based in the Grand Est region of France, I combine technical expertise with strategic thinking to deliver measurable results.
                     </p>
+                    <p class="lang-fr" style="display: none;">
+                        <strong>Architecte de Solutions Data-Driven</strong><br>
+                        Fort de 13 ans d'expérience technique en programmation et analyse de données, je spécialise dans la transformation de données complexes en insights actionnables. Basé en Grand Est, France, j'allie expertise technique et vision stratégique pour délivrer des résultats mesurables.
+                    </p>
+
+                    <h3 class="lang-en">Core Competencies</h3>
+                    <h3 class="lang-fr" style="display: none;">Compétences Clés</h3>
+                    <ul class="lang-en">
+                        <li>Advanced Data Visualization & Storytelling</li>
+                        <li>Predictive Modeling & Machine Learning</li>
+                        <li>Full-Cycle Analytics Implementation</li>
+                        <li>Cross-Functional Team Leadership</li>
+                    </ul>
+                    <ul class="lang-fr" style="display: none;">
+                        <li>Visualisation de Données Avancée</li>
+                        <li>Modélisation Prédictive & Machine Learning</li>
+                        <li>Mise en Œuvre de Solutions Analytiques Complètes</li>
+                        <li>Management d'Équipes Pluridisciplinaires</li>
+                    </ul>
                 </section>
             </div>
 
@@ -93,19 +112,23 @@
             <footer id="footer">
                 <section class="split contact">
                     <section class="alt">
-                        <h3 data-lang="Location,Localisation">Location</h3>
-                        <p>Sarre-Union, Grand Est, 67260, France</p>
+                        <h3 class="lang-en">Strategic Location</h3>
+                        <h3 class="lang-fr" style="display: none;">Localisation Stratégique</h3>
+                        <p>Sarre-Union, Grand Est, France<br>EU Zone - Open to International Projects</p>
                     </section>
                     <section>
-                        <h3 data-lang="Phone,Téléphone">Phone</h3>
-                        <p><a href="tel:+33662361767">06.62.36.17.67</a></p>
+                        <h3 class="lang-en">Professional Contact</h3>
+                        <h3 class="lang-fr" style="display: none;">Contact Professionnel</h3>
+                        <p><a href="tel:+33662361767">+33 6 62 36 17 67</a></p>
                     </section>
                     <section>
-                        <h3 data-lang="Email,Courriel">Email</h3>
+                        <h3 class="lang-en">Digital Correspondence</h3>
+                        <h3 class="lang-fr" style="display: none;">Correspondance Électronique</h3>
                         <p><a href="mailto:Melchmanu@gmail.com">Melchmanu@gmail.com</a></p>
                     </section>
                     <section>
-                        <h3 data-lang="Social,Réseaux sociaux">Social</h3>
+                        <h3 class="lang-en">Professional Network</h3>
+                        <h3 class="lang-fr" style="display: none;">Réseau Professionnel</h3>
                         <ul class="icons alt">
                             <li>
                                 <a href="https://github.com/melchmanu" target="_blank" class="icon brands fa-github">
